@@ -6,9 +6,9 @@ export default function MainArea() {
     const [selectedCard, setSelectedCard] = useState(null);
 
     return (
-        <main className="grid py-10 px-12 items-start gap-12 grid-cols-2 max-w-[1360px] mx-auto">
+        <div className="grid py-10 px-12 items-start gap-12 grid-cols-2 max-w-[1360px] mx-auto">
             <CardDisplay card={selectedCard} />
             <CardList onCardClick={setSelectedCard} />  
-        </main>
+        </div>
     );
 }

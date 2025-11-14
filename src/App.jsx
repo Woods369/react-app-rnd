@@ -7,10 +7,10 @@ import MainArea from './components/MainArea.jsx'
 
 function App() {
   return (
-    <div>
-      <Header />
-      <MainArea />
-    </div>
+      <section>
+        <Header />
+        <MainArea />
+      </section>
   );
 }
 

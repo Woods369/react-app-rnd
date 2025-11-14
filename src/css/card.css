@@ -6,7 +6,6 @@
 }
 
 /* Types */
-
 @container style(--type: "Effect Monster") {
     .card-type {
         color: orange;
