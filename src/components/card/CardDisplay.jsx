@@ -1,9 +1,5 @@
 import { useEffect, useState } from "react";
 
-function Image({ src, alt, className }) {
-    return <img src={src} alt={alt} className={className} />;
-}
-
 export default function CardDisplay({ card }) {
     const [data, setData] = useState(null);
 
@@ -31,6 +27,7 @@ export default function CardDisplay({ card }) {
     let name = data.name;
     let cardPrice = Number(data.card_prices[0].amazon_price);
     let cardType = data.type;
+    let YGOLink = data.ygoprodeck_url;
 
     return (
         <div className="card p-4 text-left" 
@@ -39,7 +36,13 @@ export default function CardDisplay({ card }) {
             data-type={cardType}>
             <h2 className="font-bold mb-2 hidden">{name}</h2>
 
-            <Image src={data.card_images[0].image_url} alt={data.name} className="w-full max-w-[450px] rounded mb-2" />
+            <a href={YGOLink} target="_blank">
+                <img 
+                    src={data.card_images[0].image_url} 
+                    alt={data.name}
+                    className="w-full max-w-[450px] rounded mb-2"
+                />
+            </a>
 
             <h3 className="card-type" data-type={data.type}>{data.type}</h3>
             <p className="card-price">

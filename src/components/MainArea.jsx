@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CardList from "./card/CardList";
+import CardBrowser from "./card/CardBrowser";
 import CardDisplay from "./card/CardDisplay";
 
 export default function MainArea() {
@@ -8,7 +8,7 @@ export default function MainArea() {
     return (
         <div className="grid py-10 px-12 items-start gap-12 grid-cols-2 max-w-[1360px] mx-auto">
             <CardDisplay card={selectedCard} />
-            <CardList onCardClick={setSelectedCard} />  
+            <CardBrowser onCardClick={setSelectedCard} />  
         </div>
     );
 }
